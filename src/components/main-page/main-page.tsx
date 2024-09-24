@@ -4,6 +4,7 @@ import './main-page.css';
 import Header from '../header/header.tsx';
 import Banner from '../banner/banner.tsx';
 import PagePlanner from '../page-planner/page-planner.tsx';
+import Footer from '../footer/footer.tsx';
 
 const MainPage: React.FC = () => {
     return (
@@ -11,6 +12,7 @@ const MainPage: React.FC = () => {
             <Header />
             <Banner />
             <PagePlanner />
+            <Footer />
         </>
     );
 }

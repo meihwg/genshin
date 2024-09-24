@@ -1,0 +1,23 @@
+footer {
+    background-color: var(--color-bg-light);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-content .col {
+    margin: 20px 50px;
+    width: 25%;
+}
+
+footer .footer-content .col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
