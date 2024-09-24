@@ -3,30 +3,14 @@ import './main-page.css';
 
 import Header from '../header/header.tsx';
 import Banner from '../banner/banner.tsx';
+import PagePlanner from '../page-planner/page-planner.tsx';
 
 const MainPage: React.FC = () => {
     return (
         <>
             <Header />
             <Banner />
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
-            <h1 className="main-page">Main Page</h1>
+            <PagePlanner />
         </>
     );
 }

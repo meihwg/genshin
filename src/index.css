@@ -4,10 +4,11 @@
   padding: 0;
 
   /* colors palette */
-  --color-bg: #f3f3f3;
+  --color-bg: #202020;
   --color-bg-dark: #202020;
+  --color-bg-light: #ffffff;
   --color-primary: #a5eea3;
-  --color-secondary: #fff;
+  --color-secondary: #f8f8f8;
 }
 
 body {
@@ -17,6 +18,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--color-bg);
 }
 
 code {
