@@ -1,11 +1,13 @@
-.user-stats {
+.todo-list {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
+    width: 20vw;
 }
 
-.stats-container {
+.todo-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -15,17 +17,4 @@
     background-color: var(--color-bg-light);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
-}
-
-.stats-container .stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    width: 30%;
-    padding: 20px 70px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    background-color: var(--color-bg-light);
 }

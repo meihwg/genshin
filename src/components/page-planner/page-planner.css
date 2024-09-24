@@ -1,6 +1,13 @@
 .page-planner {
     width: 100%;
     display: flex;
+    flex-direction: row;
+    padding: 0 2%;
+}
+
+.page-planner .left {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
