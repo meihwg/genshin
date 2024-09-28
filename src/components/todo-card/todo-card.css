@@ -1,0 +1,41 @@
+.blue {
+    background-color: var(--color-blue);
+
+}
+.red {
+    background-color: var(--color-red);
+}
+.yellow {
+    background-color: var(--color-yellow);
+}
+
+.todo-card {
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.todo-checkbox {
+    margin-right: 15px;
+}
+.todo-checkbox input {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.todo-card span {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.todo-card p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
