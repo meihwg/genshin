@@ -14,7 +14,6 @@
   --color-text: #606060;
   --color-gray: #f0f0f0;
 
-  color: var(--color-text);
 }
 
 body {
@@ -24,6 +23,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: var(--color-bg);
+}
+
+p {
+  color: var(--color-text);
 }
 
 code {

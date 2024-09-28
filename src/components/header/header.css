@@ -44,8 +44,16 @@ header nav a {
     font-size: larger;
     letter-spacing: 2px;
     transition: all 0.3s ease-in-out;
+    align-items: center;
+    display: flex;
 }
-header nav a:hover {
+header nav .icon {
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+    color: var(--color-text);
+}
+header nav li:hover a,
+header nav li:hover .icon {
     color: var(--color-primary);
 }
 
