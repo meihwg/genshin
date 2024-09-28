@@ -5,7 +5,6 @@ const Banner: React.FC = () => {
   return (
     <>
       <div className="banner"></div>
-      <div className="banner-space"></div>
     </>
   );
 };
