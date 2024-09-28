@@ -23,8 +23,8 @@ header .header_logo {
 header h1 {
     color: var(--color-primary);
     padding: 20px;
-    font-weight: 500;
-    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 header ul {
@@ -42,7 +42,7 @@ header nav a {
     text-decoration: none;
     color: #fff;
     font-size: larger;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     transition: all 0.3s ease-in-out;
 }
 header nav a:hover {
