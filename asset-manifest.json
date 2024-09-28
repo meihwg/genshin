@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/genshin/static/css/main.ebda0425.css",
-    "main.js": "/genshin/static/js/main.9b87cee7.js",
+    "main.js": "/genshin/static/js/main.19fbbc41.js",
     "static/js/867.8c9031c6.chunk.js": "/genshin/static/js/867.8c9031c6.chunk.js",
     "static/media/logo-taverne.png": "/genshin/static/media/logo-taverne.ec745fc8b2f233edb90d.png",
     "static/media/banner-3.webp": "/genshin/static/media/banner-3.6402208755622bc0d4cb.webp",
     "index.html": "/genshin/index.html",
     "main.ebda0425.css.map": "/genshin/static/css/main.ebda0425.css.map",
-    "main.9b87cee7.js.map": "/genshin/static/js/main.9b87cee7.js.map",
+    "main.19fbbc41.js.map": "/genshin/static/js/main.19fbbc41.js.map",
     "867.8c9031c6.chunk.js.map": "/genshin/static/js/867.8c9031c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ebda0425.css",
-    "static/js/main.9b87cee7.js"
+    "static/js/main.19fbbc41.js"
   ]
 }
