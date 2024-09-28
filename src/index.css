@@ -12,6 +12,7 @@
   --color-blue: #97bde0;
   --color-yellow: #dfe097;
   --color-text: #606060;
+  --color-gray: #f0f0f0;
 
   color: var(--color-text);
 }

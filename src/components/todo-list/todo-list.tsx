@@ -1,6 +1,8 @@
 import React from "react";
 import "./todo-list.css";
 
+import { PencilSimpleLine } from "phosphor-react";
+
 import TodoCard from "../todo-card/todo-card.tsx";
 
 const TodoList: React.FC = () => {
@@ -39,6 +41,7 @@ const TodoList: React.FC = () => {
                             <hr />
 
                             <div className="edit-todo">
+                                <PencilSimpleLine size={24} />
                                 <span>Edit your list</span>
                             </div>
 

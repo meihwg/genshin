@@ -30,7 +30,7 @@
 
 .edit-todo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 80px 20px 20px 20px;
@@ -38,4 +38,12 @@
     border-radius: 10px;
     background-color: var(--color-bg-light);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.edit-todo:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.edit-todo span {
+    margin-left: 20px;
 }
