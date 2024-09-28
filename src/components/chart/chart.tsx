@@ -23,11 +23,11 @@ const DoughnutChart: React.FC<DoughnutChartProps> = ({ value, color }) => {
                     data: [value, 100 - value],
                     backgroundColor: [
                         documentStyle.getPropertyValue(color),
-                        documentStyle.getPropertyValue('--color-bg-light')
+                        documentStyle.getPropertyValue('--color-gray')
                     ],
                     hoverBackgroundColor: [
                         documentStyle.getPropertyValue(color),
-                        documentStyle.getPropertyValue('--color-bg-light')
+                        documentStyle.getPropertyValue('--color-gray')
                     ]
                 }
             ]
