@@ -7,8 +7,11 @@
   --color-bg: #202020;
   --color-bg-dark: #202020;
   --color-bg-light: #ffffff;
-  --color-primary: #a5eea3;
+  --color-primary: #99e097;
   --color-secondary: #f8f8f8;
+  --color-text: #606060;
+
+  color: var(--color-text);
 }
 
 body {
@@ -25,4 +28,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h3, h4 {
+  color: var(--color-primary)
+}
+
+/* scroll bar color */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
 }
