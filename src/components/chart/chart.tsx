@@ -34,8 +34,7 @@ const DoughnutChart: React.FC<DoughnutChartProps> = ({ value, color }) => {
         };
         const options = {
             cutout: '60%',
-            aspectRatio: 0,
-            // texte au centre du donut
+            aspectRatio: 2,
             plugins: {
                 tooltip: {
                     enabled: false,
@@ -51,7 +50,6 @@ const DoughnutChart: React.FC<DoughnutChartProps> = ({ value, color }) => {
                     }
                 },
             }
-
         };
 
         setChartData(data);
