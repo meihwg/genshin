@@ -57,6 +57,11 @@ header nav li:hover .icon {
     color: var(--color-primary);
 }
 
+header .active,
+header .active .icon {
+    color: var(--color-primary);
+}
+
 .header-space {
     height: 100px;
 }

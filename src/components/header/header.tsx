@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-dom";
 
 import PageHome from "../page-home/page-home.tsx";
 import PagePlanner from "../page-planner/page-planner.tsx";
@@ -21,10 +21,18 @@ const Header: React.FC = () => {
                 </div>
                 <nav className="header_nav">
                     <ul>
-                        <li><Link to="/"> <HouseLine className="icon" size={30} /> Home</Link></li>
-                        <li><Link to="/planner"> <CalendarBlank className="icon" size={30} /> Planner</Link></li>
-                        <li><Link to="/"> <Sparkle className="icon" size={30} /> Wishes</Link></li>
-                        <li><Link to="/"> <Gear className="icon" size={30} /> Settings</Link></li>
+                        <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>
+                            <HouseLine className="icon" size={30} /> Home</NavLink>
+                        </li>
+                        <li><NavLink to="/planner" end className={({ isActive }) => isActive ? 'active' : ''}>
+                            <CalendarBlank className="icon" size={30} /> Planner</NavLink>
+                        </li>
+                        <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}> 
+                            <Sparkle className="icon" size={30} /> Wishes</NavLink>
+                        </li>
+                        <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}> 
+                            <Gear className="icon" size={30} /> Settings</NavLink>
+                        </li>
                     </ul>
                 </nav>
             </header>
