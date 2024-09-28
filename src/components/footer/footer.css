@@ -17,7 +17,8 @@ footer .footer-content .col {
     width: 25%;
 }
 
-footer .footer-content .col h3 {
+footer .footer-content .col h3,
+footer .footer-content .col h4 {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin: 10px;
 }
