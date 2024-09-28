@@ -56,7 +56,7 @@ const DoughnutChart: React.FC<DoughnutChartProps> = ({ value, color }) => {
 
         setChartData(data);
         setChartOptions(options);
-    }, []);
+    }, [value, color]);
 
     return (
         <div className="chart-container">
