@@ -1,6 +1,11 @@
 import React from "react";
 import "./footer.css";
 
+import { GithubLogo } from "phosphor-react";
+import { TwitterLogo } from "phosphor-react";
+import { DiscordLogo } from "phosphor-react";
+import { Envelope } from "phosphor-react";
+
 const Footer: React.FC = () => {
     return (
         <>
@@ -9,16 +14,16 @@ const Footer: React.FC = () => {
                     <div className="footer-content">
                         <div className="col">
                             <h3>About me</h3>
-                            <p>[icone] Github</p>
-                            <p>[icone] Twitter</p>
-                            <p>[icone] Discord</p>
-                            <p>[icone] Mail : blabla</p>
+                            <a><GithubLogo className="icon" size={24} /> Github</a> 
+                            <a><TwitterLogo className="icon" size={24} /> Twitter</a> 
+                            <a><DiscordLogo className="icon" size={24} /> Discord</a> 
+                            <a><Envelope className="icon" size={24} /> Mail : blabla</a> 
                         </div>
                         <div className="col">
                             <h3>Developed by</h3>
-                            <p>Mei</p>
+                            <a>Mei</a>
                             <h4>With the help of</h4>
-                            <p>Erlow</p>
+                            <a>Erlow</a>
                         </div>
                         <div className="col">
                             <p>Genshin Impact™ is a registered trademark of hoYoverse Co., Ltd. This site is not affiliated with or endorsed by hoYoverse. Images and data © hoYoverse Co., Ltd.</p>
