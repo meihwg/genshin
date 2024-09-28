@@ -16,7 +16,7 @@ header .header_title {
 header .header_logo {
     width: 50px;
     height: 50px;
-    background-color: #fff;
+    background: url(../../../public/img/logo-taverne.png) no-repeat center center/cover;
     margin-left: 30px;
 }
 header h1 {
