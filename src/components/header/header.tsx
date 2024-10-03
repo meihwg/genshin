@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 
-import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, NavLink } from "react-router-dom";
 
 import PageHome from "../page-home/page-home.tsx";
 import PagePlanner from "../page-planner/page-planner.tsx";
@@ -14,6 +14,7 @@ import { Gear } from "phosphor-react";
 
 const Header: React.FC = () => {
     return (
+        //<Router basename="/genshin">
         <Router>
             <header className="header">
                 <div className="header_title">
