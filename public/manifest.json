@@ -1,0 +1,8 @@
+{
+    "short_name": "Taverne de Jade",
+    "name": "La Taverne de Jade - Genshin Impact",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF"
+}

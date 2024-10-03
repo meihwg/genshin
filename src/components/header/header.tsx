@@ -40,7 +40,7 @@ const Header: React.FC = () => {
             </header>
             <div className="header-space"></div>
             <Routes>
-                <Route path="/"element={<PageHome />} />
+                <Route path="/" element={<PageHome />} />
                 <Route path="/planner" element={<PagePlanner />} />
                 <Route path="/wishes" element={<PageWishes />} />
             </Routes>
