@@ -9,8 +9,11 @@
   --color-bg-light: #ffffff;
   --color-primary: #99e097;
   --color-red: #e09797;
+  --color-red-light: #ffd8d8;
   --color-blue: #97bde0;
+  --color-blue-light: #d8e9ff;
   --color-yellow: #dfe097;
+  --color-yellow-light: #fff9d8;
   --color-text: #606060;
   --color-gray: #f0f0f0;
 
@@ -25,7 +28,7 @@ body {
   background-color: var(--color-bg);
 }
 
-p, a {
+p, a, span {
   color: var(--color-text);
 }
 
