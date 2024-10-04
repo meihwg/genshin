@@ -1,17 +1,16 @@
 import React from "react";
-import "./page-planner.css";
+import "./page-advancement.css";
 
 import UserStats from "../user-stats/user-stats.tsx";
-import Planner from "../planner/planner.tsx";
 import TodoList from "../todo-list/todo-list.tsx";
 
-const PagePlanner: React.FC = () => {
+const PageAdvancement: React.FC = () => {
     return (
         <>
-            <div className="page-title"><h2>Build planner</h2></div>
-            <div className="page-planner page">
+            <div className="page-title"><h2>Advancement tracker</h2></div>
+            <div className="page-advancement page">
                 <div className="left">
-                    <Planner />
+                    <UserStats />
                 </div>
                 <TodoList />
             </div>
@@ -19,4 +18,5 @@ const PagePlanner: React.FC = () => {
     );
 };
 
-export default PagePlanner;
+
+export default PageAdvancement;
