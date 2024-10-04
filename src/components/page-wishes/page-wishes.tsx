@@ -2,6 +2,7 @@ import React from "react";
 import "./page-wishes.css";
 
 import WishesStats from "../wishes-stats/wishes-stats.tsx";
+import Wishlist from "../wishlist/wishlist.tsx";
 
 const PageWishes: React.FC = () => {
     return (
@@ -10,6 +11,7 @@ const PageWishes: React.FC = () => {
                 <div className="left">
                     <WishesStats />
                 </div>
+                <Wishlist />
             </div>
         </>
     );

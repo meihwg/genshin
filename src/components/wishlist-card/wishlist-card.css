@@ -1,0 +1,54 @@
+.blue {
+    background-color: var(--color-blue-light);
+}
+.red {
+    background-color: var(--color-red-light);
+}
+.yellow {
+    background-color: var(--color-yellow-light);
+}
+
+.wishlist-card {
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.wishlist-checkbox {
+    margin-right: 15px;
+}
+.wishlist-checkbox input {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.wishlist-content {
+    width: 100%;
+}
+
+.wishlist-card .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.wishlist-card span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.wishlist-card p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+.wishlist-card b {
+    font-size: 1rem;
+    font-weight: 420;
+}
+
