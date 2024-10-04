@@ -23,8 +23,9 @@ footer .footer-content .col {
 
 footer .footer-content .col h3,
 footer .footer-content .col h4 {
-    font-size: 1.2rem;
-    margin: 10px;
+    margin: 5px;
+    padding: 10px 0 0 0;
+    color: var(--color-primary);
 }
 
 footer .footer-content .col a {
