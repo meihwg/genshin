@@ -3,6 +3,7 @@ import "./page-wishes.css";
 
 import WishesStats from "../../wishes-stats/wishes-stats.tsx";
 import Wishlist from "../../wishlist/wishlist.tsx";
+import WishesOverview from "../../wishes-overview/wishes-overview.tsx";
 
 const PageWishes: React.FC = () => {
     return (
@@ -11,6 +12,7 @@ const PageWishes: React.FC = () => {
             <div className="page-wishes page">
                 <div className="left">
                     <WishesStats />
+                    <WishesOverview />
                 </div>
                 <Wishlist />
             </div>

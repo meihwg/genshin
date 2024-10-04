@@ -11,7 +11,7 @@ const Wishlist: React.FC = () => {
             <section className="wishlist right">
                 <div className="wishlist-container section-container">
                     <div className="wishlist">
-                        <h3>Wishlist :</h3>
+                        <h3>Wishlist</h3>
 
                         <span>Coming soon...</span>
                         <WishlistCard title="Xilonen" color="yellow" source="0" goal="C2" date="2024-10-09" n={3} />
@@ -27,7 +27,7 @@ const Wishlist: React.FC = () => {
 
                         <div className="edit-wishlist">
                             <PencilSimpleLine size={24} />
-                            <span>Edit your wishlist</span>
+                            <span>Edit your list</span>
                         </div>
                     </div>
                 </div>

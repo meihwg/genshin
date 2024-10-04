@@ -1,0 +1,26 @@
+.wishes-overview .section-container {
+    flex-direction: column;
+}
+
+.wishes-overview table {
+    width: 100%;
+    padding: 20px 60px;
+    border-collapse: collapse;
+}
+
+.wishes-overview table thead {
+    text-align: left;
+    color: var(--color-text);
+    background-color: var(--color-gray);
+}
+
+.wishes-overview table thead th {
+    padding: 5px 40px;
+}
+
+.wishes-overview table tbody td {
+    padding: 5px 60px;
+    margin: 0 10px;
+    background-color: var(--color-bg-light);
+    border-bottom: 1px solid var(--color-gray);
+}

@@ -24,7 +24,7 @@ const WishesStats: React.FC = () => {
                         <p>64 / 90</p>
                     </div>
                     <div className="stats">
-                        <h3 className="text-blue">Total 5* pulls</h3>
+                        <h3 className="text-blue">Total 5☆ pulls</h3>
                         <p>21</p>
 
                         <hr />
@@ -35,7 +35,7 @@ const WishesStats: React.FC = () => {
 
                     </div>
                     <div className="stats">
-                        <h3 className="text-yellow">5* characters owned</h3>
+                        <h3 className="text-yellow">5☆ characters owned</h3>
                         <div className="chart-container">
                             <BarChart data={[14, 32]} color="--color-yellow" />
                         </div>
@@ -43,7 +43,7 @@ const WishesStats: React.FC = () => {
 
                         <hr />
 
-                        <h3 className="text-yellow">5* weapons owned</h3>
+                        <h3 className="text-yellow">5☆ weapons owned</h3>
                         <div className="chart-container">
                             <BarChart data={[3, 56]} color="--color-yellow" />
                         </div>

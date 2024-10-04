@@ -1,6 +1,8 @@
 import React from "react";
 import "./wishlist-card.css";
 
+import { ArrowElbowDownRight } from "phosphor-react";
+
 interface WishlistCardProps {
     title: string;
     source: string;
