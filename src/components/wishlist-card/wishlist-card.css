@@ -15,6 +15,12 @@
     flex-direction: row;
     margin-bottom: 10px;
     width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.wishlist-card:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .wishlist-checkbox {

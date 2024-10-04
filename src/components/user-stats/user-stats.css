@@ -1,0 +1,8 @@
+.user-stats .stats {
+    transition: all 0.3s ease-in-out;
+}
+
+.user-stats .stats:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}

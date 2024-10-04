@@ -2,6 +2,7 @@ import React from "react";
 import "./wishes-overview.css";
 
 import { ArrowElbowDownRight } from "phosphor-react";
+import { ListPlus } from "phosphor-react";
 
 
 const WishesOverview: React.FC = () => {
@@ -10,7 +11,7 @@ const WishesOverview: React.FC = () => {
             <section className="wishes-overview left">
                 <div className="section-container">
                     <h3>Wishes overview</h3>
-                    
+
                     <table>
                         <thead>
                             <tr>
@@ -42,12 +43,17 @@ const WishesOverview: React.FC = () => {
                             <tr>
                                 <td>Furina</td> <td>75</td> <td>2024-08-20</td> <td>4.8</td>
                             </tr>
-                            <tr className="text-red"> 
+                            <tr className="text-red">
                                 <td><ArrowElbowDownRight size={15} /> Qiqi</td> <td>22</td> <td>2024-08-15</td> <td>4.8</td>
                             </tr>
 
-                        </tbody> 
+                        </tbody>
                     </table>
+
+                    <div className="add-wish">
+                        <ListPlus size={24} />
+                        <span>Add a pull</span>
+                    </div>
                 </div>
             </section>
         </>
