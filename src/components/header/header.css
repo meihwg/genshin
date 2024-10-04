@@ -22,8 +22,8 @@ header .header_logo {
 header h1 {
     color: var(--color-primary);
     padding: 20px;
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1.8rem;
 }
 
 header ul {

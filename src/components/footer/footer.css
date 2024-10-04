@@ -23,7 +23,6 @@ footer .footer-content .col {
 
 footer .footer-content .col h3,
 footer .footer-content .col h4 {
-    margin: 5px;
     padding: 10px 0 0 0;
     color: var(--color-primary);
 }
@@ -34,6 +33,7 @@ footer .footer-content .col a {
     align-items: center;
     transition: all 0.3s ease-in-out;
     margin-bottom: 2px;
+    margin-top: 10px;
 }
 
 footer .footer-content .col a:hover {

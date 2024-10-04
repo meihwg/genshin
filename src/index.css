@@ -12,7 +12,7 @@
   --color-gray: #f0f0f0;
   --color-grey: #a8a8a8;
   
-  --color-primary: #99e097;
+  --color-primary: #70c491;
   --color-primary-light: #d8ffd8;
 
   --color-red: #e09797;
@@ -33,6 +33,11 @@ body {
   background-color: var(--color-bg);
 }
 
+h1, h2, header a,
+footer h3, footer h4 {
+  font-family: 'Cinzel';
+}
+
 h2 {
   font-weight: 500;
 }
@@ -42,10 +47,12 @@ h3 {
   justify-content: center;
   color: var(--color-text);
   font-size: 1.3rem;
+  font-weight: 600;
 }
 h4 {
   color: var(--color-primary);
   font-size: 1.1rem;
+  font-weight: 500;
 }
 p, a, span {
   color: var(--color-text);

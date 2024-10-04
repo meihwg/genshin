@@ -20,7 +20,7 @@ const WishlistCard: React.FC<WishlistCardProps> = ({ title, color, source, goal,
                     <input type="checkbox" />
                 </div>
                 <div className="wishlist-content">
-                    <div className="title"> <span> {title} </span> <p>{date ? date : ""}</p> </div>
+                    <div className="title"> <span> {title} </span> <p>{date ? <p><ArrowElbowDownRight size={15} /> {date}</p>  : ""}</p> </div>
                     <p>
                         <b>{source === "0" ? "None" : source}</b> to <b>{goal}</b>
                     </p>
