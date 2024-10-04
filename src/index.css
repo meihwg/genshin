@@ -28,6 +28,9 @@ body {
   background-color: var(--color-bg);
 }
 
+h2 {
+  font-weight: 500;
+}
 h3, h4 {
   color: var(--color-primary)
 }

@@ -8,6 +8,7 @@ import TodoList from "../todo-list/todo-list.tsx";
 const PagePlanner: React.FC = () => {
     return (
         <>
+            <div className="page-title"><h2>Build planner</h2></div>
             <div className="page-planner page">
                 <div className="left">
                     <UserStats />

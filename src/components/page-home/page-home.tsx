@@ -9,9 +9,7 @@ const PageHome: React.FC = () => {
         <>
             <div className="page-home page">
                 <div className="left">
-                    <UserStats />
                 </div>
-                <TodoList />
             </div>
         </>
     );

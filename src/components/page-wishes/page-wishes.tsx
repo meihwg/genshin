@@ -7,6 +7,7 @@ import Wishlist from "../wishlist/wishlist.tsx";
 const PageWishes: React.FC = () => {
     return (
         <>
+            <div className="page-title"><h2>Wishes tracker</h2></div>
             <div className="page-wishes page">
                 <div className="left">
                     <WishesStats />
