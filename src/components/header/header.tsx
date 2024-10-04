@@ -3,7 +3,7 @@ import "./header.css";
 
 import { HashRouter as Router, Route, Routes, NavLink } from "react-router-dom";
 
-import PageHome from "../page-home/page-home.tsx";
+import PageHome from "../pages/page-home/page-home.tsx";
 import PageAdvancement from "../pages/page-advancement/page-advancement.tsx";
 import PagePlanner from "../pages/page-planner/page-planner.tsx";
 import PageWishes from "../pages/page-wishes/page-wishes.tsx";
