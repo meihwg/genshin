@@ -6,8 +6,8 @@ import Chart from "../chart/chart.tsx";
 const UserStats: React.FC = () => {
     return (
         <>
-            <div className="user-stats">
-                <div className="stats-container">
+            <section className="user-stats left">
+                <div className="stats-container section-container">
                     <div className="stat-explo stats">
                         <h3 className="text-red">Exploration</h3>
                         <div className="chart-container">
@@ -30,7 +30,7 @@ const UserStats: React.FC = () => {
                         <p>1246 success / 1500</p>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 };

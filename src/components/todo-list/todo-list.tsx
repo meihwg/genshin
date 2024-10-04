@@ -8,8 +8,8 @@ import TodoCard from "../todo-card/todo-card.tsx";
 const TodoList: React.FC = () => {
     return (
         <>
-            <div className="todo-list">
-                <div className="todo-container">
+            <section className="todo-list right">
+                <div className="todo-container section-container">
                     <div className="todo">
                         <h3>Todo :</h3>
                         <ul>
@@ -48,7 +48,7 @@ const TodoList: React.FC = () => {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 };
