@@ -6,8 +6,10 @@ import WishesStats from "../wishes-stats/wishes-stats.tsx";
 const PageWishes: React.FC = () => {
     return (
         <>
-            <div className="page-wishes">
-                <WishesStats />
+            <div className="page-wishes page">
+                <div className="left">
+                    <WishesStats />
+                </div>
             </div>
         </>
     );
