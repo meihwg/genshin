@@ -4,10 +4,10 @@ import "./header.css";
 import { HashRouter as Router, Route, Routes, NavLink } from "react-router-dom";
 
 import PageHome from "../page-home/page-home.tsx";
-import PageAdvancement from "../page-advancement/page-advancement.tsx";
-import PagePlanner from "../page-planner/page-planner.tsx";
-import PageWishes from "../page-wishes/page-wishes.tsx";
-import PageSettings from "../page-settings/page-settings.tsx";
+import PageAdvancement from "../pages/page-advancement/page-advancement.tsx";
+import PagePlanner from "../pages/page-planner/page-planner.tsx";
+import PageWishes from "../pages/page-wishes/page-wishes.tsx";
+import PageSettings from "../pages/page-settings/page-settings.tsx";
 
 import { HouseLine } from "phosphor-react";
 import { CalendarBlank } from "phosphor-react";

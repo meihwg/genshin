@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
 
-import './chart.css';
+import './doughnut-chart.css';
 
 interface DoughnutChartProps {
     value: number;

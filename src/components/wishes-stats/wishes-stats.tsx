@@ -1,7 +1,7 @@
 import React from "react";
 import "./wishes-stats.css";
 
-import Chart from "../chart/chart.tsx";
+import Chart from "../charts/doughnut-chart/doughnut-chart.tsx";
 
 const WishesStats: React.FC = () => {
     return (
