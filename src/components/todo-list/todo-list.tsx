@@ -12,40 +12,37 @@ const TodoList: React.FC = () => {
                 <div className="todo-container section-container">
                     <div className="todo">
                         <h3>Todo :</h3>
-                        <ul>
-                            <TodoCard title="Daily commissions" 
-                                    description="Validate daily commissions by doing them or using resins" 
-                                    color="red" />
-                            <TodoCard title="Resins" 
-                                    description="Use or condensate your resins" 
-                                    color="red" />
-                            
-                            <hr />
+                        <TodoCard title="Daily commissions"
+                            description="Validate daily commissions by doing them or using resins"
+                            color="red" />
+                        <TodoCard title="Resins"
+                            description="Use or condensate your resins"
+                            color="red" />
 
-                            <TodoCard title="Weekly bosses" 
-                                    description="Get your 3 weekly bosses rewards" 
-                                    color="blue" />
-                            <TodoCard title="Reputation" 
-                                    description="Do your reputation requests and primes"
-                                    color="blue" />
+                        <hr />
 
-                            <hr />
+                        <TodoCard title="Weekly bosses"
+                            description="Get your 3 weekly bosses rewards"
+                            color="blue" />
+                        <TodoCard title="Reputation"
+                            description="Do your reputation requests and primes"
+                            color="blue" />
 
-                            <TodoCard title="Theater" 
-                                    description="Challenges the theater" 
-                                    color="yellow" />
-                            <TodoCard title="Abysse" 
-                                    description="Do your abysse floors" 
-                                    color="yellow" />
+                        <hr />
 
-                            <hr />
+                        <TodoCard title="Theater"
+                            description="Challenges the theater"
+                            color="yellow" />
+                        <TodoCard title="Abysse"
+                            description="Do your abysse floors"
+                            color="yellow" />
 
-                            <div className="edit-todo">
-                                <PencilSimpleLine size={24} />
-                                <span>Edit your list</span>
-                            </div>
+                        <hr />
 
-                        </ul>
+                        <div className="edit-todo">
+                            <PencilSimpleLine size={24} />
+                            <span>Edit your list</span>
+                        </div>
                     </div>
                 </div>
             </section>
