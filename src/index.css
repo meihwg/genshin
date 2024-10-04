@@ -12,7 +12,7 @@
   --color-red-light: #ffd8d8;
   --color-blue: #97bde0;
   --color-blue-light: #d8e9ff;
-  --color-yellow: #dfe097;
+  --color-yellow: #e0d597;
   --color-yellow-light: #fff9d8;
   --color-text: #606060;
   --color-gray: #f0f0f0;
@@ -28,17 +28,18 @@ body {
   background-color: var(--color-bg);
 }
 
+h3, h4 {
+  color: var(--color-primary)
+}
 p, a, span {
   color: var(--color-text);
 }
-
+a {
+  text-decoration: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-h3, h4 {
-  color: var(--color-primary)
 }
 
 .text-red {
@@ -51,11 +52,10 @@ h3, h4 {
   color: var(--color-yellow);
 }
 
-/* scroll bar color */
+
 ::-webkit-scrollbar {
   width: 5px;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-primary);
 }

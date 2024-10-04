@@ -21,9 +21,11 @@ const Footer: React.FC = () => {
                         </div>
                         <div className="col">
                             <h3>Developed by</h3>
-                            <a>Mei</a>
+                            <a href="">Mei</a>
                             <h4>With the help of</h4>
-                            <a>Erlow</a>
+                            <a href="">Erlow</a>
+                            <h4>Logo by</h4>
+                            <a href="">Raito</a>
                         </div>
                         <div className="col">
                             <p>Genshin Impact™ is a registered trademark of hoYoverse Co., Ltd. This site is not affiliated with or endorsed by hoYoverse. Images and data © hoYoverse Co., Ltd.</p>
