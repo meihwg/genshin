@@ -1,7 +1,7 @@
 import React from "react";
 import "./wishes-stats.css";
 
-import Chart from "../charts/doughnut-chart/doughnut-chart.tsx";
+import BarChart from "../charts/bar-chart/bar-chart.tsx";
 
 const WishesStats: React.FC = () => {
     return (
@@ -9,23 +9,45 @@ const WishesStats: React.FC = () => {
             <section className="wishes-stats left">
                 <div className="stats-container section-container">
                     <div className="stats">
-                        <h3 className="text-red">50/50</h3>
+                        <h3 className="text-red">50/50 won</h3>
                         <div className="chart-container">
-                            <Chart value={Math.round(10/15*100 * Math.pow(10, 2)) / Math.pow(10, 2)} color="--color-red" />
+                            <BarChart data={[4, 15]} color="--color-red" />
                         </div>
-                        <p>10 won / 15</p>
+                        <p>4 / 15</p>
+
+                        <hr />
+
+                        <h3 className="text-red">Average pity</h3>
+                        <div className="chart-container">
+                            <BarChart data={[64, 90]} color="--color-red" />
+                        </div>
+                        <p>64 / 90</p>
                     </div>
                     <div className="stats">
-                        <h3 className="text-blue">Luck</h3>
-                        <div className="chart-container">
-                        </div>
-                        <p>Average pity : 60</p>
+                        <h3 className="text-blue">Total 5* pulls</h3>
+                        <p>21</p>
+
+                        <hr />
+
+                        <h3 className="text-blue">Total in wishes & primogems</h3>
+                        <p>642 wishes 
+                            <br /> {642*160} primogems </p>
+
                     </div>
                     <div className="stats">
-                        <h3 className="text-yellow">Titre</h3>
+                        <h3 className="text-yellow">5* characters owned</h3>
                         <div className="chart-container">
+                            <BarChart data={[14, 32]} color="--color-yellow" />
                         </div>
-                        <p>x / x</p>
+                        <p>14 / 32</p>
+
+                        <hr />
+
+                        <h3 className="text-yellow">5* weapons owned</h3>
+                        <div className="chart-container">
+                            <BarChart data={[3, 56]} color="--color-yellow" />
+                        </div>
+                        <p>3 / 56</p>
                     </div>
                 </div>
             </section>

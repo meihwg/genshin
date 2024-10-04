@@ -7,6 +7,10 @@
   --color-bg: #202020;
   --color-bg-dark: #202020;
   --color-bg-light: #ffffff;
+  --color-text: #606060;
+  --color-gray: #f0f0f0;
+  --color-grey: #a8a8a8;
+  
   --color-primary: #99e097;
   --color-red: #e09797;
   --color-red-light: #ffd8d8;
@@ -14,8 +18,6 @@
   --color-blue-light: #d8e9ff;
   --color-yellow: #e0d597;
   --color-yellow-light: #fff9d8;
-  --color-text: #606060;
-  --color-gray: #f0f0f0;
 
 }
 
@@ -53,6 +55,12 @@ code {
 }
 .text-yellow {
   color: var(--color-yellow);
+}
+.text-green {
+  color: var(--color-primary);
+}
+.text-grey {
+  color: var(--color-grey);
 }
 
 
