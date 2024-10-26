@@ -15,7 +15,9 @@ const TodoList: React.FC<TodoListProps> = ({ title, description, color }) => {
                     <input type="checkbox" />
                 </div>
                 <div className="todo-content">
-                    <span> {title} </span>
+                    <div className="title">
+                        <span> {title} </span>
+                    </div>
                     <p> {description} </p>
                 </div>
             </div>

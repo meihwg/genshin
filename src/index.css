@@ -47,12 +47,12 @@ h3 {
   justify-content: center;
   color: var(--color-text);
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 h4 {
   color: var(--color-primary);
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 p, a, span {
   color: var(--color-text);
@@ -63,6 +63,11 @@ a {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
 .text-red {
@@ -81,6 +86,16 @@ code {
   color: var(--color-grey);
 }
 
+.icon-primo {
+  background: url("/public/img/icons/primogem.webp") no-repeat center 50%/cover;
+  width: 30px;
+  height: 30px;
+}
+.icon-interfate {
+  background: url("/public/img/icons/intertwined_fate.webp") no-repeat center 50%/cover;
+  width: 30px;
+  height: 30px;
+}
 
 ::-webkit-scrollbar {
   width: 5px;
