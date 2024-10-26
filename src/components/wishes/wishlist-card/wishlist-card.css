@@ -1,16 +1,3 @@
-.blue {
-    background-color: var(--color-blue-light);
-    --color-card: var(--color-blue);
-}
-.red {
-    background-color: var(--color-red-light);
-    --color-card: var(--color-red);
-}
-.yellow {
-    background-color: var(--color-yellow-light);
-    --color-card: var(--color-yellow);
-}
-
 .wishlist-card {
     padding: 10px 20px;
     border-radius: 5px;

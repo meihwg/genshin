@@ -86,6 +86,20 @@ code {
   color: var(--color-grey);
 }
 
+.blue {
+  background-color: var(--color-blue-light);
+  --color-card: var(--color-blue);
+}
+.red {
+  background-color: var(--color-red-light);
+  --color-card: var(--color-red);
+}
+.yellow {
+  background-color: var(--color-yellow-light);
+  --color-card: var(--color-yellow);
+}
+
+
 .icon-primo {
   background: url("/public/img/icons/primogem.webp") no-repeat center 50%/cover;
   width: 30px;

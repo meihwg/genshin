@@ -1,0 +1,26 @@
+.inventory .section-container {
+    flex-direction: column;
+}
+
+.inventory ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inventory li {
+    list-style: none;
+    padding: 0;
+    margin: 10px 5px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-card)
+}
+
+.inventory img {
+    border-radius: 15px;
+    height: 100%;
+    object-fit: cover;
+}
+
