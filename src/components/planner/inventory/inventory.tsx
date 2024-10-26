@@ -57,7 +57,7 @@ const Inventory: React.FC = () => {
                     </div>
                     <ul>
                         {characters.map((character) => (
-                            <li key={character.name}  className={getRarityClass(character.rarity)}>
+                            <li key={character.id}  className={getRarityClass(character.rarity)}>
                                 <img
                                     src={`https://genshin.jmp.blue/characters/${character.id}/icon.png`} // URL de l'icône
                                     alt={`${character.name} icon`}

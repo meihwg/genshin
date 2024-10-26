@@ -54,6 +54,7 @@ const WishlistCard: React.FC<WishlistCardProps> = ({ title, source, goal, date, 
                     id={`input-${id}`}
                     checked={isChecked}
                     onClick={handleCardClick}
+                    onChange={() => setIsChecked(!isChecked)}
                     className="custom-checkbox"
                 />
                 <div className="custom-checkbox-label"></div>
