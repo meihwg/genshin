@@ -38,7 +38,6 @@
     border-radius: 10px;
     background-color: var(--color-bg-light);
     border: 1px solid var(--color-grey);
-    transition: all 0.3s ease-in-out;
 }
 .edit-wishlist:hover {
     cursor: pointer;

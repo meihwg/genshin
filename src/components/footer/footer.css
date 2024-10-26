@@ -31,7 +31,6 @@ footer .footer-content .col a {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out;
     margin-bottom: 2px;
     margin-top: 10px;
 }

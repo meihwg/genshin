@@ -48,7 +48,7 @@ const WishlistCard: React.FC<WishlistCardProps> = ({ title, source, goal, date, 
 
     return (
         <div className={`wishlist-card ${color}`} onClick={handleCardClick}>
-            <div className="wishlist-checkbox">
+            <div className="wishlist-checkbox checkbox">
                 <input
                     type="checkbox"
                     id={`input-${id}`}
