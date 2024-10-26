@@ -2,7 +2,7 @@ import React from "react";
 import "./page-planner.css";
 
 import Planner from "../../planner/planner.tsx";
-import TodoList from "../../todo-list/todo-list.tsx";
+import TodoList from "../../todo/todo-list/todo-list.tsx";
 
 const PagePlanner: React.FC = () => {
     return (
