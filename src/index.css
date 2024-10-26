@@ -25,6 +25,11 @@
 
 }
 
+::selection {
+  background-color: var(--color-primary); /* Couleur de fond pour le texte sélectionné */
+  color: #ffffff;
+}
+
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
