@@ -1,11 +1,14 @@
 .blue {
     background-color: var(--color-blue-light);
+    --color-card: var(--color-blue);
 }
 .red {
     background-color: var(--color-red-light);
+    --color-card: var(--color-red);
 }
 .yellow {
     background-color: var(--color-yellow-light);
+    --color-card: var(--color-yellow);
 }
 
 .wishlist-card {
@@ -26,13 +29,6 @@
 .wishlist-checkbox {
     margin-right: 15px;
 }
-.wishlist-checkbox input {
-    width: 20px;
-    height: 20px;
-    border-radius: 5px;
-    border: 1px solid #fff;
-    cursor: pointer;
-}
 
 .wishlist-content {
     width: 100%;
@@ -43,11 +39,13 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    border-bottom: 1px solid var(--color-card);
+    margin-bottom: 5px;
 }
 
 .wishlist-card span {
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 .wishlist-card p {
     font-size: 1rem;
@@ -58,3 +56,25 @@
     font-weight: 420;
 }
 
+.wishlist-checkbox {
+    position: relative;
+}
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.custom-checkbox-label {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid var(--color-text);
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+.custom-checkbox:checked + .custom-checkbox-label {
+    border-color: var(--color-text);
+    background: var(--color-text) url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.285 6.709a1 1 0 0 0-1.414 0L9 16.586 5.129 12.71a1 1 0 1 0-1.415 1.415l4.586 4.586a1 1 0 0 0 1.415 0L20.285 8.123a1 1 0 0 0 0-1.414z'/%3E%3C/svg%3E") center / 12px no-repeat;
+}

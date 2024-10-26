@@ -1,23 +1,31 @@
-.wishlist {
+.wishlist-list {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.wishlist h3 {
+.wishlist-list h3 {
     margin-bottom: 20px;
 }
-.wishlist span {
+.wishlist-list span {
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 10px;
 }
+.wishlist-list p {
+    margin-left: 5px;
+}
 
-.wishlist hr {
+.wishlist-list hr {
     margin: 20px 40px;
     width: 60%;
     border: 1px solid var(--color-grey);
+}
+
+.wishlist .row {
+    color: var(--color-text);
+    align-items: center;
 }
 
 .edit-wishlist {
