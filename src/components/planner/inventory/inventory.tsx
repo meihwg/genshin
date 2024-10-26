@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./inventory.css";
 
+import { PlusCircle } from "phosphor-react";
+
 const Inventory: React.FC = () => {
     const [characters, setCharacters] = useState<{ name: string; rarity: number; id: string }[]>([]);
     const [loading, setLoading] = useState(true);
@@ -43,6 +45,16 @@ const Inventory: React.FC = () => {
             <section className="inventory left">
                 <div className="section-container">
                     <h3>Inventory</h3>
+                    <div className="edit-inventory">
+                        <div className="add-char btn">
+                            <PlusCircle size={24} />
+                            <span>Add a character</span>
+                        </div>
+                        <div className="add-weapon btn">
+                            <PlusCircle size={24} />
+                            <span>Add a weapon</span>
+                        </div>
+                    </div>
                     <ul>
                         {characters.map((character) => (
                             <li key={character.name}  className={getRarityClass(character.rarity)}>
