@@ -28,3 +28,49 @@
 .edit-todo span {
     margin-left: 20px;
 }
+
+/* modal */
+
+.todo-modal .default,
+.todo-modal .custom {
+    width: 100%;
+}
+
+.todo-modal .form {
+    gap: 30px;
+}
+
+.todo-modal table {
+    width: 100%;
+    padding: 20px 60px;
+    border-collapse: collapse;
+    color: var(--color-text);
+    text-align: left;
+    overflow: scroll;
+}
+
+.todo-modal table thead {
+    text-align: left;
+    color: var(--color-text);
+    background-color: var(--color-gray);
+}
+
+.todo-modal table thead th {
+    padding: 5px 40px;
+}
+
+.todo-modal table tbody td {
+    padding: 5px 40px;
+    margin: 0 10px;
+    background-color: var(--color-bg-light);
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.todo-modal .edit:hover {
+    cursor: pointer;
+    color: var(--color-blue);
+}
+.todo-modal .del:hover {
+    cursor: pointer;
+    color: var(--color-red);
+}
