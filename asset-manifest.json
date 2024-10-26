@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/genshin/static/css/main.b477761e.css",
-    "main.js": "/genshin/static/js/main.4fd010b3.js",
+    "main.css": "/genshin/static/css/main.ceb61afb.css",
+    "main.js": "/genshin/static/js/main.53fa7485.js",
     "static/js/867.8c9031c6.chunk.js": "/genshin/static/js/867.8c9031c6.chunk.js",
     "static/media/logo-taverne.png": "/genshin/static/media/logo-taverne.ec745fc8b2f233edb90d.png",
     "static/media/banner-4.png": "/genshin/static/media/banner-4.757419a23155905d3edf.png",
+    "static/media/intertwined_fate.webp": "/genshin/static/media/intertwined_fate.772050edb87e7e61f692.webp",
+    "static/media/primogem.webp": "/genshin/static/media/primogem.91508c1ea4daa8d228e8.webp",
     "index.html": "/genshin/index.html",
-    "main.b477761e.css.map": "/genshin/static/css/main.b477761e.css.map",
-    "main.4fd010b3.js.map": "/genshin/static/js/main.4fd010b3.js.map",
+    "main.ceb61afb.css.map": "/genshin/static/css/main.ceb61afb.css.map",
+    "main.53fa7485.js.map": "/genshin/static/js/main.53fa7485.js.map",
     "867.8c9031c6.chunk.js.map": "/genshin/static/js/867.8c9031c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b477761e.css",
-    "static/js/main.4fd010b3.js"
+    "static/css/main.ceb61afb.css",
+    "static/js/main.53fa7485.js"
   ]
 }
