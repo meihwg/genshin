@@ -118,7 +118,7 @@ const TodoList: React.FC = () => {
                 </div>
             </section>
 
-            {1 && (
+            {isModalOpen && (
                 <div className="modal-overlay">
                     <div className="modal todo-modal" onClick={(e) => e.stopPropagation()}>
                         <h3>Edit Todo List</h3>
