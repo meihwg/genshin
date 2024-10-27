@@ -13,7 +13,6 @@ import { defaultTodos, DefaultTodoItem } from "./data.ts";
 //TODO: mettre à jour l'affichage sur la liste dans la page
 //TODO: définir une liste par défaut et l'importer
 
-// Définit le type de chaque item dans customItems
 interface TodoItem {
     title: string;
     description: string;
