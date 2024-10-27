@@ -27,7 +27,6 @@
 }
 .edit-inventory .btn span {
     margin-left: 20px;
-    margin-bottom: 0px;
 }
 
 .inventory ul {
@@ -38,14 +37,13 @@
 }
 .inventory li {
     list-style: none;
-    padding: 0;
     margin: 10px 5px;
     border-radius: 15px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--color-card)
+    border: 1px solid var(--color-card);
 }
 .inventory li:hover {
-    scale: 1.1;
+    transform: scale(1.1);
 }
 .inventory img {
     border-radius: 15px;
