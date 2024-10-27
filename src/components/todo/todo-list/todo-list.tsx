@@ -6,7 +6,6 @@ import { PencilSimple, PencilSimpleLine, PlusCircle, Trash } from "phosphor-reac
 import TodoCard from "../todo-card/todo-card.tsx";
 import { defaultTodos, DefaultTodoItem } from "./data.ts";
 
-//TODO: Afficher "aucun élément" si la liste est vide
 //TODO: remplacer le tableau pas des input pour simplifier la modification
 //TODO: ajouter une croix pour fermer la modale
 //TODO: créer un composant pour la croix
@@ -161,41 +160,45 @@ const TodoList: React.FC = () => {
 
                         <span>Your custom items</span>
                         <div className="custom">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Title</th> <th>Description</th> <th>Start date</th> <th>Frequency in days</th> <th>Display ?</th> <th></th> <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {customItems.map((item, index) => (
-                                        <tr key={index}>
-                                            <td>{item.title}</td>
-                                            <td>{item.description}</td>
-                                            <td>{item.startDate}</td>
-                                            <td>{item.frequency}</td>
-                                            <td>
-                                                <input
-                                                    type="checkbox"
-                                                    checked={item.display === 1}
-                                                    onChange={() => toggleDisplay(index)}
-                                                    className="custom-checkbox"
-                                                    id={`display-${index}`}
-                                                />
-                                                <div className="custom-checkbox-label"></div>
-                                            </td>
-                                            <td><PencilSimple size={24} className="edit" /></td>
-                                            <td>
-                                                <Trash
-                                                    size={24}
-                                                    className="del"
-                                                    onClick={() => handleDeleteItem(index)}
-                                                />
-                                            </td>
+                            {customItems.length === 0 ? (
+                                <p className="no-data">No custom item.</p>
+                            ) : (
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th> <th>Description</th> <th>Start date</th> <th>Frequency in days</th> <th>Display ?</th> <th></th> <th></th>
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        {customItems.map((item, index) => (
+                                            <tr key={index}>
+                                                <td>{item.title}</td>
+                                                <td>{item.description}</td>
+                                                <td>{item.startDate}</td>
+                                                <td>{item.frequency}</td>
+                                                <td>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={item.display === 1}
+                                                        onChange={() => toggleDisplay(index)}
+                                                        className="custom-checkbox"
+                                                        id={`display-${index}`}
+                                                    />
+                                                    <div className="custom-checkbox-label"></div>
+                                                </td>
+                                                <td><PencilSimple size={24} className="edit" /></td>
+                                                <td>
+                                                    <Trash
+                                                        size={24}
+                                                        className="del"
+                                                        onClick={() => handleDeleteItem(index)}
+                                                    />
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            )}
                         </div>
 
                         <hr />

@@ -182,3 +182,9 @@ section.right .section-container {
 .modal .form input:focus {
     outline: none;
 }
+
+.no-data {
+    color: var(--color-grey);
+    text-align: center;
+    font-style: italic;
+}
