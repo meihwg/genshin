@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import "./wishlist-card.css";
+
 import { ArrowElbowDownRight } from "phosphor-react";
+import CustomCheckbox from '../../custom-checkbox/custom-checkbox.tsx';
 
 interface WishlistCardProps {
     id: number;
@@ -49,15 +51,7 @@ const WishlistCard: React.FC<WishlistCardProps> = ({ title, source, goal, date, 
     return (
         <div className={`wishlist-card ${color}`} onClick={handleCardClick}>
             <div className="wishlist-checkbox checkbox">
-                <input
-                    type="checkbox"
-                    id={`input-${id}`}
-                    checked={isChecked}
-                    onClick={handleCardClick}
-                    onChange={() => setIsChecked(!isChecked)}
-                    className="custom-checkbox"
-                />
-                <div className="custom-checkbox-label"></div>
+                <CustomCheckbox id={`input-${id}`} checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
             </div>
             <div className="wishlist-content">
                 <div className="title"> 
