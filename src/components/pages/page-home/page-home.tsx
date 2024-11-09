@@ -16,7 +16,7 @@ const PageHome: React.FC = () => {
                                 <br /><br />
                                 Vous pourrez bientôt accéder à votre historique de vœux et plannifier l'ascension de vos personnages.
                                 <br /><br />
-                                Ce site a été développé avec amour par <a href="">Mei</a>, avec le soutien des membres du <a href="">serveur Discord</a> portant le même nom.
+                                Ce site a été développé avec amour par <a href="/home">Mei</a>, avec le soutien des membres du <a href="/home">serveur Discord</a> portant le même nom.
                                 N'hésitez pas à nous contacter pour toute suggestion ou pour signaler un problème !
                             </p>
 
@@ -27,7 +27,7 @@ const PageHome: React.FC = () => {
                                 <br /><br />
                                 Soon, you’ll be able to access your wish history and plan the ascension of your characters.
                                 <br /><br />
-                                This site was lovingly developed by <a href="">Mei</a>, with support from members of the (french) <a href="">Discord server</a> of the same name. 
+                                This site was lovingly developed by <a href="/home">Mei</a>, with support from members of the (french) <a href="/home">Discord server</a> of the same name. 
                                 Feel free to reach out if you have any suggestions or issues to share with us!
                             </p>
                             <hr />

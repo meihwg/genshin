@@ -5,7 +5,7 @@ import { PencilSimple, PencilSimpleLine, PlusCircle, Trash } from "phosphor-reac
 
 import TodoCard from "../todo-card/todo-card.tsx";
 import CustomCheckbox from "../../custom-checkbox/custom-checkbox.tsx";
-import { defaultTodos, DefaultTodoItem } from "./data.ts";
+import { defaultTodos } from "./data.ts";
 
 //TODO: remplacer le tableau pas des input pour simplifier la modification
 //TODO: ajouter une croix pour fermer la modale
@@ -43,51 +43,46 @@ const TodoList: React.FC = () => {
         setIsModalOpen(false);
     };
 
+    // Ajoute un nouvel item au tableau
     const handleAddItem = () => {
-        // Vérifie si tous les champs requis sont remplis
-        if (title && description && startDate && frequency) {
-            const newItem: TodoItem = {
-                id: Date.now(),
-                title,
-                description,
-                startDate,
-                frequency,
-                display: 1,
-                type: "custom",
-                done: -1,
-            };
-
-            // Récupère les items existants dans le local storage, ou un tableau vide s'il n'y en a pas
-            const items = JSON.parse(localStorage.getItem("customTodoItems") || "[]");
-
-            // Ajoute le nouvel item et le stocke dans le local storage
-            items.push(newItem);
-            localStorage.setItem("customTodoItems", JSON.stringify(items));
-
-            // Réinitialise les champs après l'ajout
-            setTitle("");
-            setDescription("");
-            setStartDate("");
-            setFrequency(1);
-
-            // Rafraichit la liste des items
-            setCustomItems(items);
-
-            alert("Custom todo item saved!");
-        } else {
+        const newItem: TodoItem = {
+            id: Date.now(),
+            title: title.trim(),
+            description: description.trim(),
+            startDate: startDate.trim(),
+            frequency: Number(frequency),
+            display: 1,
+            type: "custom",
+            done: -1,
+        };
+        
+        if (!newItem.title || !newItem.description || !newItem.startDate || !newItem.frequency) {
             alert("Please fill out all fields.");
+            return;
         }
+        
+        const items = JSON.parse(localStorage.getItem("customTodoItems") || "[]");
+        items.push(newItem);
+        localStorage.setItem("customTodoItems", JSON.stringify(items));
+
+        setTitle("");
+        setDescription("");
+        setStartDate("");
+        setFrequency(1);
+
+        setCustomItems(items);
     };
 
+    // Supprime un item du tableau
     const handleDeleteItem = (index: number) => {
-        // Demande à l'utilisateur si il est sûr de vouloir supprimer l'item
         if (window.confirm("Are you sure you want to delete this item?")) {
-            const updatedItems = customItems.filter((_, i) => i !== index); // Supprime l'élément à l'index spécifié
+            const updatedItems = customItems.filter((_, i) => i !== index);
             setCustomItems(updatedItems);
             localStorage.setItem("customTodoItems", JSON.stringify(updatedItems));
         }
     };
 
+    // Modifie l'affichage d'un item (oui/non)
     const toggleDisplay = (id: number, type: string) => {
         const updatedItems = [...customItems];
         if (type === "default") {
@@ -97,7 +92,7 @@ const TodoList: React.FC = () => {
                 const index = updatedItems.findIndex(item => item.id === id);
                 updatedItems[index].display = updatedItems[index].display === 1 ? 0 : 1;
             } else {
-                // créer le custome item = le default
+                // Si le default item n'existe pas dans le local storage, on l'ajoute
                 if (defaultItem) {
                     const newItem: TodoItem = {
                         id: defaultItem.id,
@@ -121,6 +116,8 @@ const TodoList: React.FC = () => {
         localStorage.setItem("customTodoItems", JSON.stringify(updatedItems));
     };
 
+    // Mets à jour la date de réalisation d'un item
+    // -1 = pas encore fait
     const toggleDone = (id: number, type: string, isDone: boolean) => {
         const updatedItems = [...customItems];
         if (type === "default") {
@@ -130,7 +127,7 @@ const TodoList: React.FC = () => {
                 const index = updatedItems.findIndex(item => item.id === id);
                 updatedItems[index].done = isDone ? Date.now() : -1;
             } else {
-                // créer le custome item = le default
+                // Si le default item n'existe pas dans le local storage, on l'ajoute
                 if (defaultItem) {
                     const newItem: TodoItem = {
                         id: defaultItem.id,
@@ -154,8 +151,8 @@ const TodoList: React.FC = () => {
         localStorage.setItem("customTodoItems", JSON.stringify(updatedItems));
     };
 
+    // Retourne vrai si l'item est actif, pas encore fait
     const isTodoActive = (done: number, frequency: number) => {
-        
         const today = new Date().getTime();
         const doneDate = new Date(done).getTime();
         return today > doneDate + frequency * 24 * 60 * 60 * 1000;

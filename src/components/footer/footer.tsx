@@ -14,18 +14,18 @@ const Footer: React.FC = () => {
                     <div className="footer-content">
                         <div className="col">
                             <h3>About me</h3>
-                            <a><GithubLogo className="icon" size={24} /> Github</a> 
-                            <a><TwitterLogo className="icon" size={24} /> Twitter</a> 
-                            <a><DiscordLogo className="icon" size={24} /> Discord</a> 
-                            <a><Envelope className="icon" size={24} /> Mail : blabla</a> 
+                            <a href="/home"><GithubLogo className="icon" size={24} /> Github</a> 
+                            <a href="/home"><TwitterLogo className="icon" size={24} /> Twitter</a> 
+                            <a href="/home"><DiscordLogo className="icon" size={24} /> Discord</a> 
+                            <a href="/home"><Envelope className="icon" size={24} /> Mail : blabla</a> 
                         </div>
                         <div className="col">
                             <h3>Developed by</h3>
-                            <a href="">Mei</a>
+                            <a href="/home">Mei</a>
                             <h4>With the help of</h4>
-                            <a href="">Erlow</a>
+                            <a href="/home">Erlow</a>
                             <h4>Logo by</h4>
-                            <a href="">Raito</a>
+                            <a href="/home">Raito</a>
                         </div>
                         <div className="col">
                             <p>Genshin Impact™ is a registered trademark of hoYoverse Co., Ltd. This site is not affiliated with or endorsed by hoYoverse. Images and data © hoYoverse Co., Ltd.</p>
