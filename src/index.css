@@ -116,6 +116,16 @@ code {
   width: 30px;
   height: 30px;
 }
+.icon-fr {
+  background: url("/public/img/icons/fr.png") no-repeat center 50%/cover;
+  width: 30px;
+  height: 30px;
+}
+.icon-uk {
+  background: url("/public/img/icons/uk.png") no-repeat center 50%/cover;
+  width: 30px;
+  height: 30px;
+}
 
 hr {
   margin: 20px 40px;
