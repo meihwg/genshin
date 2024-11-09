@@ -37,4 +37,6 @@
 
 .page-home .presentation span {
     font-size: large;
+    display: flex;
+    gap: 5px;
 }

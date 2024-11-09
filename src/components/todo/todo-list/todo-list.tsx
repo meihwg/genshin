@@ -7,7 +7,7 @@ import TodoCard from "../todo-card/todo-card.tsx";
 import CustomCheckbox from "../../custom-checkbox/custom-checkbox.tsx";
 import { defaultTodos } from "./data.ts";
 
-//TODO: remplacer le tableau pas des input pour simplifier la modification
+//TODO: gérer les modifications sur la modale
 //TODO: ajouter une croix pour fermer la modale
 
 interface TodoItem {

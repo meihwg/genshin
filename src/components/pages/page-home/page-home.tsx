@@ -1,6 +1,9 @@
 import React from "react";
 import "./page-home.css";
 
+import { WarningCircle } from "phosphor-react";
+
+
 const PageHome: React.FC = () => {
     return (
         <>
@@ -33,7 +36,8 @@ const PageHome: React.FC = () => {
                             <hr />
                             <h3>What's new ?</h3>
                             <p>
-                                <span>09/11/2024 </span> - Added home page
+                                <span><span><WarningCircle size={24} weight="duotone" color="var(--color-primary)" className="warning-icon" />09/11/2024 </span> - Made the TodoList work</span>
+                                <span><span><WarningCircle size={24} weight="duotone" color="var(--color-primary)" className="warning-icon" />09/11/2024 </span> - Added home page</span>
                             </p>
                         </div>
                     </div>
