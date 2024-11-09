@@ -4,20 +4,21 @@ import "./todo-list.css";
 import { PencilSimple, PencilSimpleLine, PlusCircle, Trash } from "phosphor-react";
 
 import TodoCard from "../todo-card/todo-card.tsx";
+import CustomCheckbox from "../../custom-checkbox/custom-checkbox.tsx";
 import { defaultTodos, DefaultTodoItem } from "./data.ts";
 
 //TODO: remplacer le tableau pas des input pour simplifier la modification
 //TODO: ajouter une croix pour fermer la modale
-//TODO: créer un composant pour la croix
-//TODO: mettre à jour l'affichage sur la liste dans la page
-//TODO: définir une liste par défaut et l'importer
 
 interface TodoItem {
+    id: number;
     title: string;
     description: string;
     startDate: string;
     frequency: number;
     display: number;
+    type: string;
+    done: number;
 }
 
 const TodoList: React.FC = () => {
@@ -46,11 +47,14 @@ const TodoList: React.FC = () => {
         // Vérifie si tous les champs requis sont remplis
         if (title && description && startDate && frequency) {
             const newItem: TodoItem = {
+                id: Date.now(),
                 title,
                 description,
                 startDate,
                 frequency,
-                display: 1
+                display: 1,
+                type: "custom",
+                done: -1,
             };
 
             // Récupère les items existants dans le local storage, ou un tableau vide s'il n'y en a pas
@@ -84,12 +88,77 @@ const TodoList: React.FC = () => {
         }
     };
 
-    const toggleDisplay = (index) => {
+    const toggleDisplay = (id: number, type: string) => {
         const updatedItems = [...customItems];
-        updatedItems[index].display = updatedItems[index].display === 1 ? 0 : 1;
-
+        if (type === "default") {
+            const customItem = customItems.find(custom => custom.id === id);
+            const defaultItem = defaultTodos.find(defaultItem => defaultItem.id === id);
+            if (customItem) {
+                const index = updatedItems.findIndex(item => item.id === id);
+                updatedItems[index].display = updatedItems[index].display === 1 ? 0 : 1;
+            } else {
+                // créer le custome item = le default
+                if (defaultItem) {
+                    const newItem: TodoItem = {
+                        id: defaultItem.id,
+                        title: defaultItem.title,
+                        description: defaultItem.description,
+                        startDate: defaultItem.startDate,
+                        frequency: defaultItem.frequency,
+                        display: defaultItem.display === 1 ? 0 : 1,
+                        type: "default",
+                        done: -1,
+                    };
+                    updatedItems.push(newItem);
+                }
+            }
+        }
+        else if (type === "custom") {
+            const index = updatedItems.findIndex(item => item.id === id);
+            updatedItems[index].display = updatedItems[index].display === 1 ? 0 : 1;
+        }
         setCustomItems(updatedItems);
         localStorage.setItem("customTodoItems", JSON.stringify(updatedItems));
+    };
+
+    const toggleDone = (id: number, type: string, isDone: boolean) => {
+        const updatedItems = [...customItems];
+        if (type === "default") {
+            const customItem = customItems.find(custom => custom.id === id);
+            const defaultItem = defaultTodos.find(defaultItem => defaultItem.id === id);
+            if (customItem) {
+                const index = updatedItems.findIndex(item => item.id === id);
+                updatedItems[index].done = isDone ? Date.now() : -1;
+            } else {
+                // créer le custome item = le default
+                if (defaultItem) {
+                    const newItem: TodoItem = {
+                        id: defaultItem.id,
+                        title: defaultItem.title,
+                        description: defaultItem.description,
+                        startDate: defaultItem.startDate,
+                        frequency: defaultItem.frequency,
+                        display: defaultItem.display,
+                        type: "default",
+                        done: Date.now(),
+                    };
+                    updatedItems.push(newItem);
+                }
+            }
+        }
+        else if (type === "custom") {
+            const index = updatedItems.findIndex(item => item.id === id);
+            updatedItems[index].done = isDone ? Date.now() : -1;
+        }
+        setCustomItems(updatedItems);
+        localStorage.setItem("customTodoItems", JSON.stringify(updatedItems));
+    };
+
+    const isTodoActive = (done: number, frequency: number) => {
+        
+        const today = new Date().getTime();
+        const doneDate = new Date(done).getTime();
+        return today > doneDate + frequency * 24 * 60 * 60 * 1000;
     };
 
     return (
@@ -98,21 +167,34 @@ const TodoList: React.FC = () => {
                 <div className="todo-container section-container">
                     <div className="todo">
                         <h3>Todo :</h3>
-                        <TodoCard title="Daily commissions" description="Validate daily commissions by doing them or using resins" color="red" id={0} />
-                        <TodoCard title="Resins" description="Use or condensate your resins" color="red" id={1} />
+                        {[...defaultTodos.filter((defaultItem) => !customItems.some((customItem) => customItem.id === defaultItem.id)), ...customItems,].filter((item) => item.display === 1 && item.frequency === 1 && isTodoActive(item.done, item.frequency)).map((item, index) => (
+                                <TodoCard key={index} item={item} onChange={toggleDone} />
+                            ))}
+
                         <hr />
-                        <TodoCard title="Weekly bosses" description="Get your 3 weekly bosses rewards" color="blue" id={2} />
-                        <TodoCard title="Reputation" description="Do your reputation requests and primes" color="blue" id={3} />
+
+                        {[...defaultTodos.filter((defaultItem) => !customItems.some((customItem) => customItem.id === defaultItem.id)), ...customItems,].filter((item) => item.display === 1 && item.frequency > 1 && item.frequency <= 7 && isTodoActive(item.done, item.frequency)).map((item, index) => (
+                                <TodoCard key={index} item={item} onChange={toggleDone} />
+                            ))}
+
                         <hr />
-                        <TodoCard title="Theater" description="Challenges the theater" color="yellow" id={4} />
-                        <TodoCard title="Abysse" description="Do your abysse floors" color="yellow" id={5} />
+
+                        {[...defaultTodos.filter((defaultItem) => !customItems.some((customItem) => customItem.id === defaultItem.id)),...customItems,].filter((item) => item.display === 1 && item.frequency > 7 && isTodoActive(item.done, item.frequency)).map((item, index) => (
+                                <TodoCard key={index} item={item} onChange={toggleDone} />
+                            ))}
+
                         <hr />
-                        <span>Finished</span>
+
+                        <h3>Finished :</h3>
+                        {[...defaultTodos.filter((defaultItem) => !customItems.some((customItem) => customItem.id === defaultItem.id)), ...customItems,].filter((item) => !isTodoActive(item.done, item.frequency)).map((item, index) => (
+                            <TodoCard key={index} item={item} onChange={toggleDone} />
+                        ))}
                         <div className="edit-todo" onClick={handleEditClick}>
                             <PencilSimpleLine size={24} />
                             <span>Edit your list</span>
                         </div>
                     </div>
+
                 </div>
             </section>
 
@@ -135,23 +217,25 @@ const TodoList: React.FC = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {defaultTodos.map((item, index) => (
-                                        <tr key={index}>
-                                            <td>{item.title}</td>
-                                            <td>{item.description}</td>
-                                            <td>{item.frequency}</td>
+                                {defaultTodos.map((item, index) => {
+                                    const customItem = customItems.find(custom => custom.id === item.id);
+                                    const displayItem = customItem || item;
+
+                                    return (
+                                        <tr key={item.id} onClick={() => toggleDisplay(displayItem.id, displayItem.type)}>
+                                            <td>{displayItem.title}</td>
+                                            <td>{displayItem.description}</td>
+                                            <td>{displayItem.frequency}</td>
                                             <td>
-                                                <input
-                                                    type="checkbox"
-                                                    checked={item.display === 1}
-                                                    onChange={() => toggleDisplay(index)}
-                                                    id={`default-input-${index}`}
-                                                    className="custom-checkbox"
+                                                <CustomCheckbox
+                                                    id={`display-${displayItem.id}`}
+                                                    checked={displayItem.display === 1}
+                                                    onChange={() => toggleDisplay(displayItem.id, displayItem.type)}
                                                 />
-                                                <div className="custom-checkbox-label"></div>
                                             </td>
                                         </tr>
-                                    ))}
+                                    );
+                                })}
                                 </tbody>
                             </table>
                         </div>
@@ -170,29 +254,18 @@ const TodoList: React.FC = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {customItems.map((item, index) => (
-                                            <tr key={index}>
+                                        {customItems.filter(item => item.type === "custom").map((item, index) => (
+                                            <tr key={item.id} onClick={() => toggleDisplay(item.id, item.type)}>
                                                 <td>{item.title}</td>
                                                 <td>{item.description}</td>
                                                 <td>{item.startDate}</td>
                                                 <td>{item.frequency}</td>
                                                 <td>
-                                                    <input
-                                                        type="checkbox"
-                                                        checked={item.display === 1}
-                                                        onChange={() => toggleDisplay(index)}
-                                                        className="custom-checkbox"
-                                                        id={`display-${index}`}
-                                                    />
-                                                    <div className="custom-checkbox-label"></div>
+                                                    <CustomCheckbox id={`display-${item.id}`} checked={item.display === 1} onChange={() => toggleDisplay(item.id, item.type)} />
                                                 </td>
                                                 <td><PencilSimple size={24} className="edit" /></td>
                                                 <td>
-                                                    <Trash
-                                                        size={24}
-                                                        className="del"
-                                                        onClick={() => handleDeleteItem(index)}
-                                                    />
+                                                    <Trash size={24} className="del" onClick={() => handleDeleteItem(index)} />
                                                 </td>
                                             </tr>
                                         ))}
