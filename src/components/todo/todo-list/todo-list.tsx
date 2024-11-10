@@ -8,7 +8,6 @@ import CustomCheckbox from "../../custom-checkbox/custom-checkbox.tsx";
 import { defaultTodos } from "./data.ts";
 
 //TODO: gérer les modifications sur la modale
-//TODO: ajouter une croix pour fermer la modale
 
 interface TodoItem {
     id: number;
@@ -74,8 +73,9 @@ const TodoList: React.FC = () => {
     };
 
     // Supprime un item du tableau
-    const handleDeleteItem = (index: number) => {
+    const handleDeleteItem = (id: number) => {
         if (window.confirm("Are you sure you want to delete this item?")) {
+            const index = customItems.findIndex(item => item.id === id);
             const updatedItems = customItems.filter((_, i) => i !== index);
             setCustomItems(updatedItems);
             localStorage.setItem("customTodoItems", JSON.stringify(updatedItems));
@@ -120,12 +120,14 @@ const TodoList: React.FC = () => {
     // -1 = pas encore fait
     const toggleDone = (id: number, type: string, isDone: boolean) => {
         const updatedItems = [...customItems];
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
         if (type === "default") {
             const customItem = customItems.find(custom => custom.id === id);
             const defaultItem = defaultTodos.find(defaultItem => defaultItem.id === id);
             if (customItem) {
                 const index = updatedItems.findIndex(item => item.id === id);
-                updatedItems[index].done = isDone ? Date.now() : -1;
+                updatedItems[index].done = isDone ? today.getTime() : -1;
             } else {
                 // Si le default item n'existe pas dans le local storage, on l'ajoute
                 if (defaultItem) {
@@ -137,7 +139,7 @@ const TodoList: React.FC = () => {
                         frequency: defaultItem.frequency,
                         display: defaultItem.display,
                         type: "default",
-                        done: Date.now(),
+                        done: today.getTime(),
                     };
                     updatedItems.push(newItem);
                 }
@@ -145,7 +147,7 @@ const TodoList: React.FC = () => {
         }
         else if (type === "custom") {
             const index = updatedItems.findIndex(item => item.id === id);
-            updatedItems[index].done = isDone ? Date.now() : -1;
+            updatedItems[index].done = isDone ? today.getTime() : -1;
         }
         setCustomItems(updatedItems);
         localStorage.setItem("customTodoItems", JSON.stringify(updatedItems));
@@ -253,7 +255,7 @@ const TodoList: React.FC = () => {
                                     </thead>
                                     <tbody>
                                         {customItems.filter(item => item.type === "custom").map((item, index) => (
-                                            <tr key={item.id} onClick={() => toggleDisplay(item.id, item.type)}>
+                                            <tr key={item.id}>
                                                 <td>{item.title}</td>
                                                 <td>{item.description}</td>
                                                 <td>{item.startDate}</td>
@@ -263,7 +265,7 @@ const TodoList: React.FC = () => {
                                                 </td>
                                                 <td><PencilSimple size={24} className="edit" /></td>
                                                 <td>
-                                                    <Trash size={24} className="del" onClick={() => handleDeleteItem(index)} />
+                                                    <Trash size={24} className="del" onClick={() => handleDeleteItem(item.id)} />
                                                 </td>
                                             </tr>
                                         ))}
